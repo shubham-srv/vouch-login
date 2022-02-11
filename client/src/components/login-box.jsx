@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import { Button, Form, Input, Checkbox } from "antd";
+import { Button, Form, Input, Checkbox, message } from "antd";
 import "antd/dist/antd.css";
 
 const LoginBox = () => {
@@ -19,6 +19,8 @@ const LoginBox = () => {
       }),
     });
     const data = await result.json();
+    const { token } = data;
+    if (token) message.info("logged in successfully");
     console.log(data);
     setIsLoading(false);
   };
