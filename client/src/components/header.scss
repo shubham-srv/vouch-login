@@ -1,0 +1,31 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vmin;
+  background-color: #fef9f7;
+  margin-bottom: 1vmin;
+
+  .free-trial-button {
+    @media screen and (max-width: 800px) {
+      width: 20vw;
+    }
+    width: 10vw;
+    background-color: #0a3353;
+    color: white;
+  }
+
+  .to-login-page {
+    width: 10vw;
+    background-color: #f8a342;
+    border: none;
+    color: white;
+    display: inline;
+    margin-left: 1vmin;
+    &:hover {
+      background-color: #ff8800;
+    }
+    @media screen and (max-width: 800px) {
+      width: 20vw;
+    }
+  }
+}
